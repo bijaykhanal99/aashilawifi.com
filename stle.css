@@ -1,0 +1,168 @@
+*{ box-sizing: border-box; }
+
+html, body{ margin: 0; padding: 0; font-family: 'Segoe UI';}
+body{
+	background: url("bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
+.containerx{
+	display: flex;
+}
+.sidebar{
+	position: absolute;
+	width: 220px;
+	max-height: 1500px;
+	height: auto;
+	background: skyblue;
+	opacity: 75%;
+	border: 1px solid deepskyblue;
+}
+.sidebar h2{
+	color: red;
+	margin-left: 15px;
+}
+.sidebar ul{
+	width: 100%;
+	padding: 2px;
+	
+}
+.sidebar ul li{
+	list-style: none;
+	display: inline-block;
+	justify-content: space-around;
+	padding: 4px 8px;
+	margin-left: 5px;
+		border-radius: 4px;
+	background: deepskyblue;
+	transition: 0.5s;
+	}
+	.sidebar ul li .active{
+		position: relative;
+			border: 1px solid red;
+			background: transparent;
+	}
+	.sidebar ul li .active a{
+		color: red;
+	font-weight: 500;
+	}
+	.sidebar ul li a{
+		text-decoration: none;
+		color: #fff;
+		font-weight: 400;
+		transition: 0.5s;
+	}
+	.sidebar ul li:hover{
+		border: 1px solid red;
+			background: transparent;
+	}
+.sidebar ul li:hover a{
+	color: red;
+	font-weight: 500;
+	
+
+}
+.sidebar .detail{
+	width: 100%;
+}
+.sidebar .detail p{
+	color: #fff;
+	font-size: 5px;
+}
+#container{ width: 900px; margin: 0 auto; margin-top: 5%; margin-bottom: 5%; background: skyblue; border-radius: 7px; border: 1px solid deepskyblue; opacity: 90%; z-index: 1;}
+
+
+
+input{ width: 100%; padding: 15px 5px; border-radius: 10px; border: 1px solid deepskyblue; }
+
+.form-group{ margin-bottom: 20px; }
+
+.row{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+button{ cursor: pointer; border-radius: 7px; border: none; padding: 15px 30px;  }
+button[type="button"]{ background: #ddd; color: #777; border: 1px solid deepskyblue;}
+button[type="submit"]{ background: dodgerblue; color: #fff; border: 1px solid #ddd; width: 300px;}
+
+table{ width: 100%; border-collapse: collapse; }
+tr{border-bottom: 2px solid deepskyblue; }
+tr:nth-child(even){ background: #eee;  }
+th{ font-size: 16px; background: deepskyblue; color: #fff; padding: 10px; }
+td{ padding: 5px; text-align: center; border-left:1px solid deepskyblue;}
+
+#btnEditProduct{ padding: 5px; background: deepskyblue; color: #fff; border: 1px solid blue;}
+#btnDeleteProduct{ padding: 5px; background: #f00; color: #fff; border: 1px solid red; }
+
+#output{ display: flex; justify-content: space-between; align-items: center; }
+
+[type="search"]{ width: 200px; }
+#output a {
+	text-decoration: none;
+	background: red;
+	padding: 15px 30px;
+	color: #fff;
+	border-radius: 7px;
+}
+#container h2{
+color: red;
+}
+.namein{
+	text-align: center;
+	color: red;
+	text-transform: uppercase;
+}
+
+.detail .log{
+	position: relative;
+
+}
+.detail .log input{
+	padding-right: 27px;
+	font-size: 15px;
+	margin-bottom: 5px;
+	margin-top: 0;
+}
+.detail .log img{
+	height: 20px;
+	width: auto;
+	position: absolute;
+	top:12px;
+	right: 10px;
+	cursor: pointer;
+
+}
+.detail .logbtn {
+position: relative;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.detail .logbtn a{
+	padding: 10px 16px;
+	width: 50%;
+text-align: center;
+text-decoration: none;
+
+	outline: none;
+	margin-bottom: 5px;
+	color: deepskyblue;
+	
+	letter-spacing: 2px;
+		font-size: 10px;
+	background: transparent;
+	border: 2px solid deepskyblue;
+	transition: 0.5s ease;
+}
+.detail .logbtn a:hover{
+	color: #fff;
+	width: 100%;
+font-size: 20px; 	background: deepskyblue; letter-spacing: 5px; text-transform: uppercase;
+}
+.detail h2{
+	border-bottom: 1px solid #fff;
+	padding: 3px 5px;
+text-align: center;
+}
+p span{
+	color: red;
+}

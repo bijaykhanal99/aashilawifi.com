@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="stle.css">
+    <link href="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/css/nepali.datepicker.v4.0.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div class="containerx">
+			<div class="sidebar">
+			<h2>Aashila wifi</h2>
+			<hr>
+			<ul>
+				<li class="active" id="btnback"><a href="#">Back</a></li>
+			
+			</ul>
+			<hr> </div>
+			<div id="container">
+        <h2 class="namein">Aashila wifi</h2>
+        <p class="cul"> Create Users list</p>
+        <hr>
+        <form role="form">
+            <div class="form-group">
+                <p>Full Name <span>*</span> :</p>
+                <input type="text" id="title" placeholder="Full Name" required />
+            </div> 
+            <div class="row">
+                <div class="form-group">
+                    <p>Start date <span>*</span>:</p>
+                    <input type="dob" step=".01" min="0" id="qty" placeholder="2079-06-01" required />
+                </div> 
+                <div class="form-group">
+                    <p>valid date <span>*</span> :</p>
+                    <input type="dob" step=".01" min="0" id="cp" placeholder="2079-06-31"  required/>
+                </div> 
+                <div class="form-group">
+                    <p>Amount <span>*</span>:</p>
+                    <input type="text" step=".01" min="0" id="sp" placeholder="200" required />
+                </div> 
+            </div> 
+
+                    
+                <div class="form-group">
+                    <p>mac address <span>*</span>:</p>
+                    <input type="text"  id="mac" placeholder="abc123a5b58b" required />
+                </div> 
+                
+            <button type="button">Cancel</button>          
+            <button type="submit">Save</button>          
+        </form>
+<hr>
+<div id="output">
+             <h2>USERS LIST</h2>
+            <a href="javascript:void(0);" id="btnClearData">Delete all Data[<span id="dataCount">0</span>]</a>
+            <input type="search" id="search" placeholder="Search...">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>SN.</th>
+                    <th>Name</th>
+                    <th>start Date</th>
+                    <th>Valid Date</th>
+                    <th>Amount</th>
+                    <th>WI-FI Mac Address</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        
+    </div>
+</div>
+<script type="text/javascript">
+	let btnback = document.getElementById('btnback');
+	btnback.addEventListener('click', () => {
+window.history.back();
+	});
+</script>
+
+<script src="main.js"></script>
+
+</body>
+</html>

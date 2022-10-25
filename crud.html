@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashila wifi</title>
+    <link rel="stylesheet" href="stle.css">
+    <link href="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/css/nepali.datepicker.v4.0.min.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+    	
+    	.time{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.time h5{
+			font-size: 30px;
+			text-align: center;
+			margin:0;
+			color: deepskyblue;
+			background: #fff;
+		}
+		.time span{
+			font-size: 15px;
+			margin:0;
+			color: #fff;
+		}
+		.time .timegroup{
+			pointer-events: none;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			margin-left: 10px;
+			padding: 5px;
+			background: deepskyblue;
+
+		}
+		.time .ampm{
+			margin-left: -3px;
+	pointer-events: none;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background: deepskyblue;
+		}
+		.cul{
+			color: #5d5d5d;
+			letter-spacing: 6px;
+			font-size: 15px;
+			text-align: center;
+			margin:0;
+		}
+    </style>
+</head>
+<body>
+	<div class="containerx">
+		<div class="sidebar">
+			<h2>Aashila wifi</h2>
+
+			<hr>
+			<ul>
+				<li class="active" id="btnback"><a href="#">Home</a></li>
+				<li><a href="detail.html">detail</a></li>
+				<li><a href="contact.html">contact</a></li>
+			</ul>
+			<hr> 
+	<div class="time">
+				<div class="timegroup">
+					<h5 id="hrs">00</h5>
+					<span>Hours</span>
+				</div>
+			<div class="timegroup">
+					<h5 id="min">00</h5>
+					<span>Minute</span>
+				</div>
+				<div class="timegroup">
+					<h5 id="sec">00</h5>
+					<span>Second</span>
+				</div>
+			<div class="ampm">
+					<span id="ampm">AM</span>
+				</div>
+			</div>
+		</div>
+    <div id="container">
+    	<div class="logo">
+    		<img src="logo.png" height="50px" width="75px" style="position: absolute;">
+    	</div>
+    	<h1 style="text-align: center; margin: 0; color: deepskyblue; -webkit-text-stroke:1px red;">AASHILA WIFI</h1>
+    	<hr>
+    	Network details
+    	<ul>
+    		<li>
+    			Technology:<a href="#"> WI-FI 4</a></li>
+    			<li>IP address:<a href="#"> fe80::2c68:1564:f87:bd6e 192.168.1.12</a></li>
+    			<li>Subnet mask:<a href="#"> 255.255.255.0</a></li>
+    		<li> Router:<a href="#"> 192.168.1.1</a></li>
+    	</ul>
+    </div>
+</div>
+    <script src="main.js">
+    </script>
+
+
+
+    <script>
+    	window.onload = function(){
+    		var dob = document.getElementById("qty");
+    		dob.nepaliDatePicker();
+    		var dobb = document.getElementById("cp");
+    		dobb.nepaliDatePicker();
+    	};
+    </script>
+    <script src="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/js/nepali.datepicker.v4.0.min.js" type="text/javascript"></script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+const hrst = document.getElementById('hrs');
+const mint = document.getElementById('min');
+const sect = document.getElementById('sec');
+const ampml = document.getElementById('ampm');
+
+function updateClock(){
+	let h = new Date().getHours();
+	let m = new Date().getMinutes();
+	let s = new Date().getSeconds();
+	let ampm = "AM";
+	if (h > 12){
+		h = h - 12;
+		ampm = "PM";
+	}
+
+h = h<10 ? "0" + h : h;
+s = s<10 ? "0" + s : s;
+m = m<10 ? "0" + m : m;
+
+hrst.innerText = h;
+mint.innerText = m;
+sect.innerText = s;
+ampml.innerText = ampm;
+setTimeout(() => {
+updateClock()
+}, 1000)
+}
+updateClock();
+
+
+</script>
+<script type="text/javascript">
+		let btnback = document.getElementById('btnback');
+	btnback.addEventListener('click', () => {
+window.history.back();
+	});
+</script>
+</body>
+</html>
