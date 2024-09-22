@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="stle.css">
+	<style type="text/css">
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+		.sidebar{
+			width: 400px;
+		}
+		.sidebar .detail p{
+			font-size: 20px;
+			color: red;
+			letter-spacing: 3px;
+			font-weight: 300;
+			cursor: pointer;
+			margin:0;
+			margin-left: 6px;
+			margin-bottom: 3px;
+		}
+		.time{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.time h5{
+			font-size: 30px;
+			text-align: center;
+			margin:0;
+			color: deepskyblue;
+			background: #fff;
+		}
+		.time span{
+			font-size: 15px;
+			margin:0;
+			color: #fff;
+		}
+		.time .timegroup{
+			pointer-events: none;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			margin-left: 10px;
+			padding: 5px;
+			background: deepskyblue;
+
+		}
+	.sidebar .detail h3{
+		margin-left: 15%;
+		color: cornflowerblue;
+		margin:0;
+	}
+	</style>
+</head>
+<body>
+	<div class="sidebar">
+			<h2>Aashila wifi</h2>
+			<hr>
+		
+			<div class="detail">
+			<h3>log in</h3>
+			<form method="post">
+			<div class="log">
+				<img src="user2.png">
+				<input type="email" placeholder="Enter your email or phone" name="" required="required">
+			</div>
+			<div class="log">
+				<img src="lock.png" onclick="show()">
+				<input type="password" placeholder="Enter your password" name="" id="password" required="required">
+			</div>
+					<p>forget password?</p>
+
+			<div class="logbtn">
+						<a href="crud.html"> next</a>
+						<a href="signin.html">sign in</a>
+			</div>
+			<div class="time">
+				<div class="timegroup">
+					<h5 id="hrs">00</h5>
+					<span>Hours</span>
+				</div>
+			<div class="timegroup">
+					<h5 id="min">00</h5>
+					<span>Minute</span>
+				</div>
+				<div class="timegroup">
+					<h5 id="sec">00</h5>
+					<span>Second</span>
+				</div>
+			<div class="timegroup">
+					<span id="ampm">AM</span>
+				</div>
+			</div>
+		</form>
+			</div>
+		</div>
+		<script type="text/javascript">
+function show(){
+	var a = document.getElementById('password');
+
+	if (a.type == 'password'){
+		a.type = 'text';
+	}
+	else{
+		a.type = 'password';
+	}}
+</script>
+<script type="text/javascript">
+const hrst = document.getElementById('hrs');
+const mint = document.getElementById('min');
+const sect = document.getElementById('sec');
+const ampml = document.getElementById('ampm');
+
+function updateClock(){
+	let h = new Date().getHours();
+	let m = new Date().getMinutes();
+	let s = new Date().getSeconds();
+	let ampm = "AM";
+	if (h > 12){
+		h = h - 12;
+		ampm = "PM";
+	}
+
+h = h<10 ? "0" + h : h;
+s = s<10 ? "0" + s : s;
+m = m<10 ? "0" + m : m;
+
+hrst.innerText = h;
+mint.innerText = m;
+sect.innerText = s;
+ampml.innerText = ampm;
+setTimeout(() => {
+updateClock()
+}, 1000)
+}
+updateClock();
+</script>
+</body>
+</html>
